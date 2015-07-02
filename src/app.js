@@ -9,21 +9,13 @@ var main = new UI.Window({
 var main_time = new UI.TimeText({
   text: '%I:%M',
   position: new Vector2(0, 45),
-  size: new Vector2(108, 42),
+  size: new Vector2(144, 42),
   font: 'bitham-42-light',
-  textAlign: 'right'
-});
-
-var am_pm = new UI.TimeText({
-  text: '%p',
-  position: new Vector2(108, 63),
-  size: new Vector2(25, 24),
-  font: 'gothic-24',
-  textAlign: 'right'
+  textAlign: 'center'
 });
 
 var main_date = new UI.TimeText({
-  text: '%a %B %d',
+  text: '%a %d %B',
   position: new Vector2(0, 90),
   size: new Vector2(144, 18),
   font: 'gothic-18',
@@ -31,7 +23,6 @@ var main_date = new UI.TimeText({
 });
 
 main.add(main_time);
-main.add(am_pm);
 main.add(main_date);
 
 main.show();
