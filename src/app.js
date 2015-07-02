@@ -1,11 +1,16 @@
+// MyFirstWatchface
+// by Michael Henning (myklhenn@icloud.com)
+// made for the original Pebble and Pebble Steel
 
 var UI = require('ui');
 var Vector2 = require('vector2');
 
+// main ui window
 var main = new UI.Window({
   fullscreen: true
 });
 
+// time element
 var main_time = new UI.TimeText({
   text: '%I:%M',
   position: new Vector2(0, 45),
@@ -14,6 +19,7 @@ var main_time = new UI.TimeText({
   textAlign: 'center'
 });
 
+// date element
 var main_date = new UI.TimeText({
   text: '%a %d %B',
   position: new Vector2(0, 90),
@@ -22,7 +28,7 @@ var main_date = new UI.TimeText({
   textAlign: 'center'
 });
 
+// MAIN
 main.add(main_time);
 main.add(main_date);
-
 main.show();
